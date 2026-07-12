@@ -68,10 +68,10 @@ const Navbar = () => {
             <Logo size={40} animated />
             <div className="flex flex-col">
               <span className="text-base font-bold text-dark-900 leading-tight group-hover:text-primary-600 transition-colors">
-                柚木信息
+                柚木官网
               </span>
               <span className="text-[10px] text-dark-900/50 tracking-wider">
-                YOUMU INFO SYSTEM
+                YOUMU OFFICIAL
               </span>
             </div>
           </a>

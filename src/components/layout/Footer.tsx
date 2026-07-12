@@ -29,10 +29,10 @@ const Footer = () => {
               <Logo size={44} />
               <div className="flex flex-col">
                 <span className="text-base font-bold text-white leading-tight">
-                  柚木信息化管理系统
+                  柚木官网
                 </span>
                 <span className="text-[10px] text-white/50 tracking-wider">
-                  YOUMU INFO SYSTEM
+                  YOUMU OFFICIAL
                 </span>
               </div>
             </a>
@@ -142,7 +142,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-white/40">
-            © 2026 柚木信息化管理系统. 保留所有权利.
+            © 2026 柚木官网. 保留所有权利.
           </p>
           <div className="flex items-center gap-6">
             <button className="text-xs text-white/40 hover:text-white/60 transition-colors">
