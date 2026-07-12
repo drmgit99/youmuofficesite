@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #0f172a;
+  overflow-x: hidden;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* 文字流光效果 */
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    #0f172a 0%,
+    #0f172a 35%,
+    #0d6efd 50%,
+    #0f172a 65%,
+    #0f172a 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 4s ease-in-out infinite;
+}
+
+@keyframes textShimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* 渐变文字 */
+.gradient-text {
+  background: linear-gradient(135deg, #0d6efd 0%, #6366f1 50%, #0d6efd 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* 玻璃态效果 */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* 背景光晕 */
+.hero-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(13, 110, 253, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* 分隔波浪 */
+.wave-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+
+/* 网格背景 */
+.bg-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* 选中的输入框效果 */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+/* 按钮涟漪效果 */
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.4s;
+}
+
+.btn-ripple:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* 卡片悬浮光晕 */
+.card-glow {
+  position: relative;
+}
+
+.card-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.2), rgba(99, 102, 241, 0.2));
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.card-glow:hover::before {
+  opacity: 1;
+}
+
+/* 平滑滚动偏移 */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* 细网格背景 */
+.bg-grid-fine {
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* 点状背景 */
+.bg-dots {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* 噪点纹理 */
+.noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* 光泽扫过效果 */
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+.shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  transform: rotate(30deg);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.shine:hover::after {
+  opacity: 1;
+  animation: shineMove 1.5s ease-in-out;
+}
+
+@keyframes shineMove {
+  0% {
+    transform: translateX(-100%) rotate(30deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(30deg);
+  }
+}
+
+/* 文字选中颜色 */
+::selection {
+  background: rgba(13, 110, 253, 0.2);
+  color: #0d6efd;
+}
+
+/* 蒙版渐变 */
+.mask-fade-b {
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
