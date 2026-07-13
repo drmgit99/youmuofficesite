@@ -35,7 +35,7 @@ const plans: Plan[] = [
     id: 'basic',
     name: '基础版',
     tagline: '小型团队起步之选',
-    price: 3999,
+    price: 8999,
     priceUnit: '元（买断制）',
     description: '一次付费，永久使用，适合小型团队和初创企业快速上手数字化运维管理',
     icon: Sparkles,
@@ -380,7 +380,7 @@ const Pricing = () => {
                   <div className="mt-6 pt-6 border-t border-light-200 flex flex-wrap items-center gap-4 text-xs text-dark-900/50">
                     <div className="flex items-center gap-1.5">
                       <Shield className="w-3.5 h-3.5 text-emerald-500" />
-                      30天无理由退款
+                      终身免费升级
                     </div>
                     <div className="flex items-center gap-1.5">
                       <Zap className="w-3.5 h-3.5 text-amber-500" />
