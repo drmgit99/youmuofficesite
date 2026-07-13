@@ -377,19 +377,26 @@ const Pricing = () => {
                   </div>
 
                   {/* 底部保障 */}
-                  <div className="mt-6 pt-6 border-t border-light-200 flex flex-wrap items-center gap-4 text-xs text-dark-900/50">
-                    <div className="flex items-center gap-1.5">
-                      <Shield className="w-3.5 h-3.5 text-emerald-500" />
-                      终身免费升级
+                  <div className="mt-6 pt-6 border-t border-light-200">
+                    <div className="flex flex-wrap items-center gap-4 text-xs text-dark-900/50">
+                      <div className="flex items-center gap-1.5">
+                        <Shield className="w-3.5 h-3.5 text-emerald-500" />
+                        版本升级保障
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <Zap className="w-3.5 h-3.5 text-amber-500" />
+                        专属实施服务
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <Check className="w-3.5 h-3.5 text-primary-500" />
+                        数据安全承诺
+                      </div>
                     </div>
-                    <div className="flex items-center gap-1.5">
-                      <Zap className="w-3.5 h-3.5 text-amber-500" />
-                      1对1专属实施
-                    </div>
-                    <div className="flex items-center gap-1.5">
-                      <Check className="w-3.5 h-3.5 text-primary-500" />
-                      数据安全承诺
-                    </div>
+                    <p className="mt-3 text-[10px] text-dark-900/40 leading-relaxed">
+                      <span className="font-medium">升级说明：</span>
+                      基础版买断后免费升级承诺不少于3年；订阅版订阅期内持续免费升级，中断订阅后免费升级承诺不少于3年。
+                      以上承诺不包括新增核心功能，涵盖原功能的升级扩展及问题处理。
+                    </p>
                   </div>
                 </div>
               </div>
